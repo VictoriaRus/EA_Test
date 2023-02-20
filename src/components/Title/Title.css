@@ -1,0 +1,17 @@
+.title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 104%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #162C4E;
+    opacity: 0.39;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+}

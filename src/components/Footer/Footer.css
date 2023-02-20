@@ -1,0 +1,45 @@
+.footer {
+    padding: 61px 0 72px;
+    background-color: #162C4E;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.footer__link {
+    position: absolute;
+    top: 76px;
+    right: 111px;
+}
+
+.link-button {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #ffffff;
+    position: relative;
+}
+
+.link-button::after {
+    content: "";
+    position: absolute;
+    right: -34px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../assets/icons/arrow-down.svg");
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        position: static;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .footer__link {
+        margin-top: 15px;
+        position: static;
+        text-align: center;
+    }
+}

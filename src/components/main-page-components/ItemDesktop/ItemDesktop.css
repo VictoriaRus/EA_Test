@@ -1,0 +1,26 @@
+.number {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 100%;
+    color: #162C4E;
+    margin-bottom: 4px;
+}
+
+.elem {
+    position: relative;
+}
+
+.elem-wrap {
+    position: absolute;
+    top: 18px;
+    left: calc(50% - 33px);
+}
+
+.elem-text {
+    width: 69px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+}

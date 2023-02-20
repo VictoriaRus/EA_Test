@@ -1,0 +1,26 @@
+.count-down {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 70px;
+}
+
+.colon {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 100%;
+    color: #162C4E;
+}
+
+.colon-tablet {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    color: #162C4E;
+}
+
+@media screen and (max-width: 768px) {
+    .count-down {
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,36 @@
+.input {
+    width: 440px;
+    padding: 16px 8px 16px 27px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.input-elem{
+    width: 440px;
+    position: relative;
+}
+
+.input-elem::after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 43px;
+    height: 43px;
+    background-image: url("../../assets/icons/arrow-input.svg");
+}
+
+@media screen and (max-width: 415px) {
+    .input-elem{
+        width: 100%;
+    }
+    .input {
+        width: 100%;
+    }
+}

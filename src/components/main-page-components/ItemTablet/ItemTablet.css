@@ -1,0 +1,26 @@
+.num {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    color: #162C4E;
+    margin-bottom: 4px;
+}
+
+.el {
+    position: relative;
+}
+
+.el-wrap {
+    position: absolute;
+    top: 14px;
+    left: calc(50% - 33px);
+}
+
+.el-text {
+    width: 64px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
