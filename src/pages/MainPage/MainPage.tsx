@@ -5,7 +5,6 @@ import Title from "../../components/Title/Title";
 import Footer from "../../components/Footer/Footer";
 import Logo from "../../components/Logo/Logo";
 import CountDown from "../../components/main-page-components/CountDown/CountDown";
-import Portal from "../../components/Portal/Portal";
 
 const MainPage = () => {
     const openResource = useCallback(() => {
@@ -13,7 +12,6 @@ const MainPage = () => {
     }, [])
 
     return (
-        <>
         <div className="main-page">
             <div className="main">
                 <div className="container">
@@ -27,8 +25,6 @@ const MainPage = () => {
             </div>
             <Footer/>
         </div>
-            <Portal>Hello</Portal>
-        </>
     );
 };
 

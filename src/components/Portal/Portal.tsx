@@ -1,34 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 
-interface IPortalProps{
+interface IPortalProps {
     children: React.ReactNode;
 }
-interface IPortalState{}
 
-class Portal extends React.Component<IPortalProps, IPortalState>{
+const Portal = ({ children }: IPortalProps) => {
+    const el: HTMLDivElement = document.createElement("div");
 
+    useEffect(() => {
+        document.body.appendChild(el);
 
-    private el: HTMLDivElement = document.createElement("div");
-    constructor(props: IPortalProps) {
-        super(props);
-    }
+        return () => {
+            document.body.removeChild(el);
+        };
+    }, [el]);
 
-    componentDidMount() {
-        //после первого рендера
-        document.body.appendChild(this.el);
-    }
-
-    componentWillUnmount() {
-        //перед удолением компанента
-        document.removeChild(this.el);
-    }
-
-    render(){
-        const { children }= this.props;
-        // @ts-ignore
-        return ReactDOM.createPortal(children, this.el);
-    }
-}
+    return ReactDOM.createPortal(children, el);
+};
 
 export default Portal;

@@ -1,9 +1,11 @@
 import React, { useCallback, useState } from "react";
 import "./Footer.css";
 import Input from "../Input/Input";
+import Modal from "../Modal/Modal";
 import { REGULAR } from "../../mock-data/constants";
 
 const Footer = () => {
+    const [isOpen, setIsOpen] = useState(false);
     const [text, setText] = useState("");
     const [emailError, setEmailError] = useState("Email can`t be empty");
 
@@ -30,10 +32,9 @@ const Footer = () => {
             if (this.readyState === this.DONE) {
                 console.log(this.responseText);
                 console.log(data);
+                setIsOpen(prevState => !prevState);
                 setText("");
                 setEmailError("Email can`t be empty");
-            } else {
-                console.log(`Ошибка ${xhr.status}: ${xhr.statusText}`);
             }
         });
 
@@ -46,9 +47,11 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="container">
-                <Input onChange={onTextChange} value={text} fieldName="email"
+                <Input onChange={ onTextChange }
+                       value={ text }
+                       fieldName="email"
                        placeholder="Enter your Email and get notified"
-                       onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
+                       onKeyDown={ (event: React.KeyboardEvent<HTMLInputElement>) => {
                            if (event.key === "Enter" && !emailError) {
                                loadDoc();
                            }
@@ -58,6 +61,13 @@ const Footer = () => {
                     <a className="link-button">Other Events</a>
                 </div>
             </div>
+            <Modal title="SUCCESS!"
+                   isOpen={ isOpen }
+                   onSubmit={ () => setIsOpen(false) }
+                   onClose={ () => setIsOpen(false) }
+            >
+                <p>You have successfully subscribed to the email newsletter</p>
+            </Modal>
         </div>
     );
 };
