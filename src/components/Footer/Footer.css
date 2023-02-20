@@ -30,9 +30,17 @@
     background-image: url("../../assets/icons/arrow-down.svg");
 }
 
+.error {
+    color: #DF2224;
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 768px) {
     .footer {
-        position: static;
         flex-direction: column;
         padding: 40px 0;
     }
@@ -41,5 +49,8 @@
         margin-top: 15px;
         position: static;
         text-align: center;
+    }
+    .error {
+        top: 12%;
     }
 }
