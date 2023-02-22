@@ -178,3 +178,19 @@
     }
 }
 
+@media screen and (max-width: 415px) {
+    .content-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        margin-bottom: 8px;
+    }
+
+    .content-date {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 22px;
+    }
+}
+

@@ -1,5 +1,19 @@
 .logo {
     margin-bottom: 92px;
+    animation-duration: 500ms;
+    animation-name: logo;
+}
+
+@keyframes logo {
+    from {
+        transform: translate(0, -50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 415px) {

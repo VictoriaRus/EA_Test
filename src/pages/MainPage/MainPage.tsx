@@ -1,4 +1,4 @@
-import React, {useCallback, useRef, useState} from "react";
+import React, { useCallback, useState } from "react";
 import "./MainPage.css";
 import Button from "../../components/Button/Button";
 import Title from "../../components/Title/Title";
@@ -24,11 +24,17 @@ const MainPage = () => {
                 <div className="main">
                     <div className="container">
                         <Logo/>
-                        <Title text="Under Construction"/>
-                        <div className="text">We're making lots of improvements and will be back soon</div>
-                        <CountDown/>
-                        <div className="text text-but">Check our event page when you wait:</div>
-                        <Button text="Go to the event" onClick={ openResource }/>
+                        <div className="main-title">
+                            <Title text="Under Construction"/>
+                            <div className="text">We're making lots of improvements and will be back soon</div>
+                        </div>
+                        <div className="main-body">
+                            <CountDown/>
+                        </div>
+                        <div className="main-footer">
+                            <div className="text text-but">Check our event page when you wait:</div>
+                            <Button text="Go to the event" onClick={ openResource }/>
+                        </div>
                     </div>
                 </div>
                 <Footer onOpen={ onOpenSection }/>

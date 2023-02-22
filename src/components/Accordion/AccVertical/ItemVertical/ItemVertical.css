@@ -23,6 +23,8 @@
 }
 
 .button-content {
+    display: flex;
+    align-items: center;
     position: absolute;
     z-index: 11;
 }
@@ -139,4 +141,30 @@
 
 .open {
     height: 460px;
+}
+
+@media screen and (max-width: 415px) {
+    .accordion-button {
+        height: 64px;
+    }
+
+    .accordion-id {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    .accordion-title {
+        text-align: left;
+        margin-left: 16px;
+        font-size: 18px;
+    }
+
+    .accordion-body {
+        height: 158px;
+        padding: 24px 20px 20px;
+    }
+
+    .open {
+        height: 376px;
+    }
 }
