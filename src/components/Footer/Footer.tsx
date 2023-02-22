@@ -3,12 +3,9 @@ import "./Footer.css";
 import Input from "../Input/Input";
 import Modal from "../Modal/Modal";
 import { REGULAR } from "../../mock-data/constants";
+import { Link } from "react-scroll";
 
-interface IFooterProps {
-    onOpen: () => void;
-}
-
-const Footer = ({ onOpen }: IFooterProps) => {
+const Footer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [text, setText] = useState("");
     const [emailError, setEmailError] = useState("Email can`t be empty");
@@ -72,8 +69,10 @@ const Footer = ({ onOpen }: IFooterProps) => {
                 {
                     isError && (<p className="error">{ emailError }</p>)
                 }
-                <div className="footer__link">
-                    <p  className="link-button" onClick={ onOpen }>Other Events</p>
+                <div className="footer__link" >
+                    <Link to="section-1" spy={ true } smooth={ true } offset={ 50 } duration={ 500 } >
+                        <span className="link-button" >Other Events</span>
+                    </Link>
                 </div>
             </div>
             <Modal title="SUCCESS!"

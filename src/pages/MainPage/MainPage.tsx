@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import "./MainPage.css";
 import Button from "../../components/Button/Button";
 import Title from "../../components/Title/Title";
@@ -8,12 +8,6 @@ import CountDown from "../../components/main-page-components/CountDown/CountDown
 import Accordion from "../../components/Accordion/Accordion";
 
 const MainPage = () => {
-    const [isEvents, setIsEvents] = useState(true);
-
-    const onOpenSection = useCallback(() => {
-        setIsEvents(true);
-    }, []);
-
     const openResource = useCallback(() => {
         window.open("https://egorovagency.by/");
     }, [])
@@ -37,18 +31,16 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
-                <Footer onOpen={ onOpenSection }/>
+                <Footer />
             </div>
-            {
-                isEvents &&(
-                    <div className="events-container" >
-                        <div className="section">
-                            <Title text="All events"/>
-                            <Accordion />
-                        </div>
+            <div className="events-container">
+                <div className="section" id="section-1">
+                    <div className="events-title">
+                        <Title text="All events"/>
                     </div>
-                )
-            }
+                    <Accordion/>
+                </div>
+            </div>
         </>
     );
 };

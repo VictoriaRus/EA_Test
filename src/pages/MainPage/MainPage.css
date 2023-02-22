@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    min-height: auto;
     overflow: hidden;
     position: relative;
 }
@@ -133,6 +134,10 @@
     height: 100vh;
 }
 
+.events-title {
+    margin-bottom: 40px;
+}
+
 @media screen and (max-width: 1400px) {
     .main-page::after {
         width: 249px;
@@ -156,6 +161,11 @@
 
     .events-container {
         margin: 0 40px;
+        height: auto;
+    }
+
+    .events-title{
+        margin-bottom: 0;
     }
 }
 
