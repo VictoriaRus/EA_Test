@@ -1,9 +1,13 @@
 import React from "react";
 import "./Title.css";
 
-const Title = () => {
+interface ITitleProps {
+    text: string;
+}
+
+const Title = ({ text }:ITitleProps ) => {
     return (
-        <h1 className="title">Under Construction</h1>
+        <h1 className="title">{ text }</h1>
     );
 };
 

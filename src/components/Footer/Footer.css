@@ -17,7 +17,13 @@
     font-size: 20px;
     line-height: 150%;
     color: #ffffff;
+    cursor: pointer;
     position: relative;
+}
+
+.link-button:hover {
+    border-bottom: 1px solid #ffffff;
+    transition: all 0.5s ease-out;
 }
 
 .link-button::after {
@@ -50,6 +56,7 @@
         position: static;
         text-align: center;
     }
+
     .error {
         top: 12%;
     }

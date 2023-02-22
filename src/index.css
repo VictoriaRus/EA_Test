@@ -20,8 +20,20 @@ html {
     margin: auto;
 }
 
+.section{
+    padding: 110px 0 99px;
+}
+
+@media screen and (max-width: 768px) {
+    .section{
+        padding: 59px 0;
+    }
+}
+
 @media screen and (max-width: 415px) {
     .container{
         width: 100%;
     }
 }
+
+

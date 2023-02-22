@@ -1,0 +1,142 @@
+.accordion-button {
+    height: 85px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 4px solid #FFFFFF;
+    background-color: #162C4E;
+    position: relative;
+}
+
+.accordion-button::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #DF2224;
+    box-shadow: 0 0 10px #FF1E00;
+    z-index: 15;
+}
+
+.button-content {
+    position: absolute;
+    z-index: 11;
+}
+
+.active .accordion-button {
+    background-color: #162C4E;
+}
+
+.button-img-active {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.button-img-active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #162C4E;
+    border-right: 1px solid #FFFFFF;
+    z-index: 10;
+}
+
+.button-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.button-img::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(270deg, rgba(3, 3, 3, 0.7) 0%, #162C4E 100%);
+    z-index: 10;
+}
+
+.button-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.button-img-active img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.accordion-id {
+    font-family: "SF Pro Display", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin-left: 40px;
+}
+
+.accordion-title {
+    font-family: "SF Pro Display", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin-left: 32px;
+}
+
+.accordion-body {
+    height: 192px;
+    border-bottom: 4px solid #FFFFFF;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 25px 40px 40px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.2s;
+    position: relative;
+}
+
+.item-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.open {
+    height: 460px;
+}
