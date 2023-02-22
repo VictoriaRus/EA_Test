@@ -60,6 +60,11 @@ const Footer = () => {
                        value={ text }
                        fieldName="email"
                        placeholder="Enter your Email and get notified"
+                       onClick={ () => {
+                           if (!emailError) {
+                               onSubscribe();
+                           }
+                       }}
                        onKeyDown={ (event: React.KeyboardEvent<HTMLInputElement>) => {
                            if (event.key === "Enter" && !emailError) {
                                onSubscribe();
