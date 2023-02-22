@@ -1,3 +1,7 @@
+# Open app EA-Test-React
+[open app EA-Test-React](https://victoriarus.github.io/EA_Test/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
