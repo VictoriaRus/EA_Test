@@ -9,7 +9,7 @@ const Accordion = () => {
     return (
         <>
             {
-                size.width > 768 ? <AccHorizon /> : <AccVertical />
+                size.width > 1244 ? <AccHorizon /> : <AccVertical />
             }
         </>
     );

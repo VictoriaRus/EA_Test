@@ -8,7 +8,7 @@ const CountDown = () => {
     const size = useWindowSize();
 
     const calculateTimeLeft = () => {
-        let deadline = new Date("May 31, 2023 00:00:00").getTime();
+        let deadline = new Date("June 31, 2023 00:00:00").getTime();
         let now = new Date().getTime();
         let difference = deadline - now;
         let timeLeft = {};

@@ -5,8 +5,27 @@
     text-align: center;
     text-transform: uppercase;
     color: #162C4E;
-    opacity: 0.39;
     margin-bottom: 8px;
+    opacity: 0;
+}
+
+.title-animation {
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-name: title-animation;
+}
+
+@keyframes title-animation {
+    from {
+        transform: translate(0, -50%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 0.39;
+    }
 }
 
 @media screen and (max-width: 768px) {

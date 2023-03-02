@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Title.css";
+import useObserver from "../../hooks/useObserver/useObserver";
 
 interface ITitleProps {
     text: string;
 }
 
-const Title = ({ text }:ITitleProps ) => {
+const Title = ({ text }: ITitleProps) => {
+    const ref = useRef<HTMLHeadingElement>(null);
+    const isVisible = useObserver(ref);
+
     return (
-        <h1 className="title">{ text }</h1>
+        <h1 className={ isVisible ? "title title-animation" : "title" } ref={ ref }>
+            { text }
+        </h1>
     );
 };
 

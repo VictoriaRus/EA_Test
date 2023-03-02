@@ -1,6 +1,12 @@
 .logo {
     margin-bottom: 92px;
-    animation-duration: 500ms;
+    opacity: 0;
+}
+
+.logo-an {
+    margin-bottom: 92px;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
     animation-name: logo;
 }
 
